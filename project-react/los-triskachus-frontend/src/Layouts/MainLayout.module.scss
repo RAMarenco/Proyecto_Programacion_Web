@@ -1,5 +1,7 @@
+@import "./../variables";
+
 .Main-Wrapper {
-    position: absolute;    
+    position: fixed;    
     transition: linear 500ms;
     top: 0;
     bottom: 0;

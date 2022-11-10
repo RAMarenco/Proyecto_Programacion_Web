@@ -6,7 +6,7 @@
     width: 3.75em;
     height: 3.75em;
     border-radius: 0.5em;
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -22,6 +22,10 @@
         text-align: center;
         font-size: 0.625em;
         font-weight: $semiBold-600;
+    }
+
+    &.activeActionButton{
+        background-color: $primary-color;
     }
 
     &:hover {
@@ -46,7 +50,21 @@
             border-radius: 3.75em;
             position: absolute;
             bottom: -60%;
-            transition: 500ms;
+            transition: 500ms;            
+        }
+
+        &.activeActionButton{
+            cursor: default;
+            background-color:  $primary-color;
+
+            > .IconMessage {
+                color: #000;
+            }
+
+            > .Profile-decoration {            
+                background: $secondary-color; 
+                color: #000;                  
+            }
         }
 
         &:hover {
@@ -60,8 +78,20 @@
 
             > .Profile-decoration {
                 background: $secondary-color;                
-                color: black;
+                color: #000;
             }
         }
-    }    
+    }
+
+    &.OnlyPhone {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ActionButton {
+        &.OnlyPhone {
+            display: flex;
+        }
+    }
 }
