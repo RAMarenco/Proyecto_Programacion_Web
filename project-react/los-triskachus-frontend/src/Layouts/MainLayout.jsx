@@ -10,6 +10,7 @@ import Header from './../components/Header/Header';
 import Footer from './../components/Footer/Footer';
 import Contact from './../views/Contact/Contact';
 import Profile from './../views/Profile/Profile';
+import Stores from './../views/Stores/Stores'
 import SideMenu from '../components/Header/NavBarMenu/SideMenu/SideMenu';
 
 const MainLayout = ({Page = ""}) => {
@@ -44,7 +45,11 @@ const MainLayout = ({Page = ""}) => {
         {
             PageDir: Profile,
             PageName: "Profile",
-        }
+        },
+        {
+            PageDir: Stores,
+            PageName: "Stores",
+        },
     ];
     
     const PageFound = PagesList.filter(pageList => pageList.PageName === Page);

@@ -14,9 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout Page="Home"/>}/>
           <Route path="/Stores" element={<MainLayout Page="Stores"/>}>
-            <Route path=":Store" element={<MainLayout Page="Stores"/>}>
-              
-            </Route>
+            <Route path=":Store" element={<MainLayout Page="Store"/>}/>
           </Route>
           <Route element={<ProtectedRoutes/>}>           
             <Route path="/Profile" element={<MainLayout Page="Profile"/>}/>

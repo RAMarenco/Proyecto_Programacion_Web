@@ -7,7 +7,7 @@ import Actions from './../Actions/Actions';
 import { useAuth } from '../../core/AuthRoleUser';
 
 const Header = ({ menuElements = [], onClickMenu }) => {
-    let user = useAuth().role;
+    const user = useAuth().role;
     if(user === "Client") {
         menuElements = menuElements.slice(-2);
     }
