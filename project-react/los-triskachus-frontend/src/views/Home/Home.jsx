@@ -3,8 +3,10 @@ import classes from './Home.module.scss';
 import Slider from './../../components/Slider/Slider';
 import Card from './../../components/Card/Card';
 
+import { useAuth } from '../../core/AuthRoleUser';
+
 const Home = () => {
-    const user = "Client";
+    const user = useAuth().role;
     return (
         <>
             <div className={ classes["Home"] }>

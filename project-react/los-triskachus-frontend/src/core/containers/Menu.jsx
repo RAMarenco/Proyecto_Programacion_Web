@@ -1,6 +1,8 @@
+import {useAuth} from './../AuthRoleUser';
+
 let menuData = [];
-const Menu = () => {
-    const user = "Client"
+const Menu = () => {    
+    const user = useAuth().role;
     
 
     const ClientMenu = [

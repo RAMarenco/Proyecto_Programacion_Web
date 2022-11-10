@@ -1,12 +1,13 @@
 import classes from './Actions.module.scss';
 
 import ActionButton from './ActionButton/ActionButton';
+import { useAuth } from '../../core/AuthRoleUser';
 
 const Actions = ({ menuElements = [], menuType = "" }) => {
-    const user = "Client";
+    const user = useAuth().role;
     const menu = menuElements.map(menu => {
         const Url = `/${menu.Page}`;
-        if((menu.Page === 'Profile' || menu.Page === 'LogOut' || ((menu.Page === 'LogIn' || menu.Page === 'Stores') && user === 'Default')) && menuType === "Side"){            
+        if((menu.Page === 'Profile' || menu.Page === 'LogOut' || ((menu.Page === 'LogIn' || menu.Page === 'Stores') && user === "")) && menuType === "Side"){            
             return (
                 <ActionButton key={menu.Page} Icon={menu.Page} extraClass={["OnlyPhone"]} Url={Url}/>
             );

@@ -3,11 +3,13 @@ import logo from '../../../assets/logo.png';
 import { MdMenu } from 'react-icons/md';
 import { Link } from "react-router-dom";
 
+import { useAuth } from '../../../core/AuthRoleUser';
+
 const NavBarMenu = ({onClickMenu}) => {
     return (
         <div className={ classes["NavBarMenu"] }>
             <div>
-                <MdMenu className={ classes["NavBarMenu-Icon"]} onClick={onClickMenu}/>
+                <MdMenu className={ useAuth().role === "Admin" || useAuth().role === "Vendor" ? `${classes["NavBarMenu-Icon"]} ${classes["OnlyPhone"]}` : classes["NavBarMenu-Icon"]} onClick={onClickMenu}/>
             </div>
             
             <Link to="/">

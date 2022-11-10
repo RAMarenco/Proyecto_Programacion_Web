@@ -4,8 +4,10 @@ import NavBarMenu from './NavBarMenu/NavBarMenu';
 import Header_SearchBar from './Header-SearchBar/Header-SearchBar';
 import Actions from './../Actions/Actions';
 
+import { useAuth } from '../../core/AuthRoleUser';
+
 const Header = ({ menuElements = [], onClickMenu }) => {
-    let user = "Client";
+    let user = useAuth().role;
     if(user === "Client") {
         menuElements = menuElements.slice(-2);
     }

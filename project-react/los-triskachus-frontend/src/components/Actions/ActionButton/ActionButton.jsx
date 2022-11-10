@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MdLogout, MdPerson, MdStore, MdShoppingCart, MdLogin, MdPeople } from 'react-icons/md';
 import { useLocation } from 'react-router-dom'
 
-const ActionButton = ({ Icon = "", extraClass = "", Url = "" }) => {      
+const ActionButton = ({ Icon = "", extraClass = "", Url = "" }) => {
     const location = useLocation();    
     const icons = [
         {
