@@ -11,23 +11,25 @@ const Card = ( {extraclasses = [], type = ""} ) => {
     if(type === "StoreSphere") {
         data = [
             {
+                id: 1,
                 store: "Lua",
             },
             {
+                id: 2,
                 store: "MuffinsPlace",
             },
             
         ];
         dataMap = data.map(store => {
             return (
-                <StoreSphere key={store.store} store={store.store}/>
+                <StoreSphere key={store.id} store={store}/>
             );
         });
     }
 
     if (dataMap.length < 4) {
         for (let i = 5; i >= dataMap.length; i--) {
-            const emptyStore = <StoreSphere key={`none${i}`} store={"none"}/>
+            const emptyStore = <StoreSphere key={`none${i}`} store={{id:i,store:"none"}}/>
             dataMap=[...dataMap, emptyStore];
         }
     }

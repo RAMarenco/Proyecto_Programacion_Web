@@ -5,7 +5,7 @@ import StoreSphere from './StoreSpheres/StoreSphere';
 const StoreSections = ({ Category = "", Stores = [] }) => {    
     const StoresData = Stores.map(Store => {
         return (
-            <StoreSphere key={Store.Store} Store={Store.Store}/>
+            <StoreSphere key={Store.id} Store={Store}/>
         );        
     })
     return (

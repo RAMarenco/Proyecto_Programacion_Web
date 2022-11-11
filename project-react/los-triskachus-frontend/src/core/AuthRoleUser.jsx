@@ -10,5 +10,5 @@ const ProtectedRoutes = () => {
     return isAuth.loggedIn ? <Outlet/> : <Navigate to="/Login"/> ;
 }
 
-export {ProtectedRoutes, useAuth}
+export {ProtectedRoutes, useAuth};
 

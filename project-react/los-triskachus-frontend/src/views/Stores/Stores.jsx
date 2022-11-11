@@ -1,9 +1,11 @@
 import classes from './Stores.module.scss';
 import StoreSections from './../../components/StoreSections/StoreSections';
 import { useAuth } from '../../core/AuthRoleUser';
+import { useOutlet, Outlet } from 'react-router-dom';
 
 const Stores = () => {
     const user = useAuth().role;
+    const outlet = useOutlet();
 
     const dataDummy = [
         {
@@ -11,27 +13,35 @@ const Stores = () => {
             Stores: 
             [                
                 {
+                    id: 1,
                     Store: "Lua"
                 },
                 {
+                    id: 3,
                     Store: "Pulseritas Cherry 🍒"
                 },
                 {
+                    id: 4,
                     Store: "a"
                 },
                 {
+                    id: 5,
                     Store: "b"
                 },
                 {
+                    id: 6,
                     Store: "c"
                 },
                 {
+                    id: 7,
                     Store: "d"
                 },
                 {
+                    id: 8,
                     Store: "e"
                 },
                 {
+                    id: 9,
                     Store: "f"
                 }
             ]
@@ -41,6 +51,7 @@ const Stores = () => {
             Stores: 
             [                
                 {
+                    id: 2,
                     Store: "MuffinsPlace"
                 }
             ]
@@ -57,11 +68,13 @@ const Stores = () => {
     
     return (
         <div className={ classes["Stores"] }>
-        {(user === "Client" || user === "") && 
-            <>
-                { data }
-            </>
-        }
+            {outlet ? <Outlet/> :
+                (user === "Client" || user === "") && 
+                <>
+                    { data }
+                </>
+            }
+        
         </div>
     );
 }
