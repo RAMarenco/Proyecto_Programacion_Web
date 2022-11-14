@@ -18,6 +18,14 @@
     transition: 500ms;
     justify-content: center;
 
+    &.small {
+        max-width: 4.625em;
+        max-height: 4.625em;
+    
+        width: 4.625em;
+        height: 4.625em;
+    }
+
     > img {
         object-fit: fill;
         width: 100%;

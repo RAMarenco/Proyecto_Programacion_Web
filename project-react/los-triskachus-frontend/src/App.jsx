@@ -21,7 +21,9 @@ function App() {
           <Route path="/" element={<MainLayout/>}>
             <Route path="/" element={<Home/>}/>
             <Route path="Stores" element={<Stores/>}>              
-              <Route path="Store/:id/:Store" element={<Store/>}/>              
+              <Route path="Store/:id/:Store" element={<Store/>}>
+                <Route path="Product/:id/:Name" element={<p>Product</p>}/>
+              </Route>
               <Route path="Category/:Category" element={<Category/>}/>
               <Route path="*" element={<Navigate to="/Stores"/>}/>
             </Route>          
