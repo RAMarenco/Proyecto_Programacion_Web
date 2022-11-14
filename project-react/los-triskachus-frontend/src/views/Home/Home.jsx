@@ -1,7 +1,7 @@
 import classes from './Home.module.scss';
 
 import Slider from './../../components/Slider/Slider';
-import Card from './../../components/Card/Card';
+import Card from '../../components/Card/RecentStoreCard/RecentStoreCard';
 
 import { useAuth } from '../../core/AuthRoleUser';
 

@@ -1,4 +1,4 @@
-@import "./../../variables";
+@import "./../../../variables";
 
 .StoreSections {
     background-color: $secondary-color-light-alt;
@@ -28,6 +28,7 @@
             background-color: $secondary-color-light-alt;
             width: min-content;
             height: min-content;
+            padding: 0.5em 2em;
             
             &:nth-child(2n) {
                 background-color: $secondary-color-light;
@@ -39,7 +40,7 @@
             max-width: 43.75em;
             height: 1.5px;
             background-color: #000;
-            transform: translateY(0.9375em);
+            transform: translateY(1.4375em);
             position: absolute;
             z-index: 1;
         }

@@ -1,4 +1,4 @@
-import classes from './Card.module.scss';
+import classes from './RecentStoreCard.module.scss';
 
 import StoreSphere from './StoreSphere/StoreSphere';
 

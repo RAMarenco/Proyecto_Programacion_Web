@@ -1,13 +1,17 @@
 import classes from './StoreSections.module.scss';
 
 import StoreSphere from './StoreSpheres/StoreSphere';
+import CategorySphere from './CategorySphere/CategorySphere';
 
 const StoreSections = ({ Category = "", Stores = [] }) => {    
-    const StoresData = Stores.map(Store => {
+    const StoresData = Stores.map(Store => {        
         return (
             <StoreSphere key={Store.id} Store={Store}/>
         );        
     })
+
+    const categorysphere = <CategorySphere key={Category} Category={Category}/>
+
     return (
         <div className={ classes["StoreSections"] }>
             <div className={ classes["Category-Title"] }>
@@ -21,6 +25,7 @@ const StoreSections = ({ Category = "", Stores = [] }) => {
             <div className={ classes["Stores"] }>
                 <div className={ classes["Stores-Spheres"] }>
                     { StoresData }
+                    { categorysphere }
                 </div>
             </div>
         </div>

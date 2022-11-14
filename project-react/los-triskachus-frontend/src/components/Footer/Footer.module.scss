@@ -44,10 +44,15 @@
     > .Footer-CopyRight {
         font-size: 0.6875em;
     }
-}
+    
+    @media (max-width: 600px) {
+        > .Footer-Info {               
+            gap: 0.5em;            
 
-@media (max-width: 600px) {
-    .Footer-Lists {
-        flex-basis: 100%;
+            > .Footer-Lists {
+                flex-basis: 100%;
+            }
+        }
     }
 }
+

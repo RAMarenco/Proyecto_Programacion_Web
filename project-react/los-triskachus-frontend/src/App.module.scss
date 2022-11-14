@@ -10,6 +10,26 @@
   main {
     flex: 1;
     display: flex;
-    margin-top: 4.375em;
+  }
+}
+
+body {
+  &::-webkit-scrollbar {
+    width: 10px;  
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $secondary-color-light; 
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary-color-dark;
   }
 }

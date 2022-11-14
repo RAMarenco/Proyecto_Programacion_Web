@@ -1,11 +1,11 @@
-@import "./../../../variables";
+@import "./../../../../variables";
 
 .StoreSphere {
-    max-width: 11.25em;
-    max-height: 11.25em;
+    max-width: 6.875em;
+    max-height: 6.875em;
     
-    width: 11.25em;
-    height: 11.25em;
+    width: 6.875em;
+    height: 6.875em;
 
     flex: 100%;
     overflow: hidden;
@@ -22,7 +22,7 @@
         transition: 200ms;
     }
 
-    > .empty {
+    > div.empty {
         background-color: $secondary-color;
         width: 100%;
     }

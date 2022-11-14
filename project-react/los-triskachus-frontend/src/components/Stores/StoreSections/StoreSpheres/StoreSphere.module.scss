@@ -1,11 +1,11 @@
-@import "./../../../variables";
+@import "./../../../../variables";
 
 .StoreSphere {
-    max-width: 6.875em;
-    max-height: 6.875em;
+    max-width: 11.25em;
+    max-height: 11.25em;
     
-    width: 6.875em;
-    height: 6.875em;
+    width: 11.25em;
+    height: 11.25em;
 
     flex: 100%;
     overflow: hidden;
@@ -15,21 +15,23 @@
 
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);    
     
+    transition: 500ms;
+    justify-content: center;
+
     > img {
         object-fit: fill;
         width: 100%;
         height: 100%;
-        transition: 200ms;
+        text-align: center;
+        line-height: 11.25em;
     }
 
-    > div.empty {
+    > .empty {
         background-color: $secondary-color;
         width: 100%;
     }
 
     &:hover {
-        > img {
-            transform: scale(1.115);
-        }
+        transform: scale(1.115);        
     }
 }
