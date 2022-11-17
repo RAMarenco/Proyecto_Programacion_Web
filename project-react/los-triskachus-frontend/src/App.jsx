@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-do
 import MainLayout from './Layouts/MainLayout';
 import Login from './views/Login/Login';
 import Register from './views/Register/Register';
-import Register2 from './components/RegisterForm/RegisterForm2';
 
 import {ProtectedRoutes} from './core/AuthRoleUser';
 import Home from './views/Home/Home';
@@ -35,7 +34,6 @@ function App() {
           </Route>
           <Route path="/Login" element={<Login />}/>
           <Route path="/Register" element={<Register />}/>
-          <Route path="/Register/2" element={<Register2 />}/>
         </Routes>
       </Router>
     </div>

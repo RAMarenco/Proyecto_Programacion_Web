@@ -7,12 +7,14 @@
 
     > .inputs {
         display: flex;
+        min-height: 10vh;
+        min-width: 30em;
         width: 30%;
         height: 100%;
-        background: #C9CFDF;
+        background: $secondary-color;
         color: #000000;
         justify-content: center;
-
+        
         > .form-fields {
             display: flex;
             height: 100%;
@@ -25,27 +27,54 @@
             > .title {
                 font-size:  1.2rem;
                 font-weight: bold;
-                margin-bottom: 3rem;
+                margin-bottom: 1.5rem;
             }
 
             .side-inputs {
                 display: flex;
-                gap: 1em;
+                gap: 2em;
 
                 div {
                     > div.side-input-text {
                         position: relative;
+                        padding-top: 0.5em;
+                        display: block;
 
                         input {
+                            font-size: 0.75em;
                             cursor: default;
                         }
+
+                        .select-menu {
+                            color: #3d3d3d;
+                            cursor: pointer;
+                            width: 120px;
+                            border-radius: 0.5rem;
+                            border: none;
+                            outline: none;
+                            padding: 0.5rem 1.1rem ; 
+                            margin-bottom: 0.5rem;
+                            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25);
+                            padding: 0.75em;
+                            font-size: 13px;
+                            margin-bottom: 1.5em;
+                            font-family: $main-font;
+                            font-weight: 600;
+                            appearance: none;
+
+                            option {
+                                color: black;
+                                background-color: $secondary-color-light-alt;
+                            }
+                        } 
+    
 
                         span {
                             .calendar {
                                 position: absolute;
                                 font-size: 20px;
-                                fill: black;
-                                top: 9px;
+                                fill: grey;
+                                top: 15px;
                                 right: 11px;
                             }
 
@@ -56,13 +85,10 @@
                             .arrow {
                                 position: absolute;
                                 font-size: 20px;
-                                fill: black;
-                                top: 10px;
+                                fill: grey;
+                                top: 16px;
                                 right: 10px;
-                            }
-
-                            .arrow:hover {
-                                cursor: pointer;
+                                pointer-events: none;
                             }
                         }
                     }
@@ -91,27 +117,34 @@
                 font-weight: 600;
             }
 
+            .buttons-container {
+                padding-top: 1em;
+                display: flex;
+                width: 100%;
+                gap: 1em;
+            }
+
             .submit-button:hover {
                 background-color: $primary-color-dark;
                 transition: ease-in-out 300ms;
                 cursor: pointer;
             }
               
-            .forgot-pass {
-                width: 100%;
-                margin-bottom: 1.5rem;
+            .submit-button:first-child {
+                background-color: $secondary-color-light;
+                color: $primary-color-light;
+                font-weight: 700;
 
-                > .Span{
-                    font-size: 0.8rem;
-                    float: right;
-                    font-weight: bold;
-                    text-decoration: underline;
-                    padding-bottom: 0.8em;
+                &:hover {
+                    color: $primary-color-dark;
+                    transition: ease-in-out 300ms;
+                    cursor: pointer;
                 }
             }
-              
+            
             .submit-button {
-                background: #5A7BA0;
+                width: 100%;
+                background: $primary-color-light;
                 color: white;
             }
 
@@ -148,10 +181,10 @@
     }
 
     .logo {
-        width: 70%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
-        background: #2B4D71;
+        background: $primary-color;
         opacity: 0.9;
 
         > .contenedor {
@@ -162,6 +195,7 @@
                 width: 100%;
                 height: 100%;
                 filter: blur(10px);
+                object-fit: cover;
             }
         }
     }
